@@ -1,6 +1,6 @@
 ---
 name: design-director
-description: Use first for any design task (websites, online stores, web or mobile apps, brand assets, Figma, Canva, Stitch, Shopify, WordPress) to pick the lead design skill, settle conflicts and keep one brand spec.
+description: "Use first for any design task (websites, online stores, web or mobile apps, brand assets, Figma, Canva, Stitch, Shopify, WordPress) to pick the lead design skill, settle conflicts and keep one brand spec."
 ---
 
 # Design Director
@@ -137,6 +137,34 @@ Brand-specific bans plus the lead skill's AI tells.
 - **Performance:** responsive optimized images, self-hosted or platform fonts with swap, the LCP element prioritised, no layout shift from late media.
 - **RTL:** for Arabic, Urdu or Hebrew readers use CSS logical properties, `dir="rtl"`, mirrored directional icons and carousels, an Arabic-capable font pairing, and test both directions.
 
-## 7. Finish
+## 7. Rights, privacy and security floor (every surface, every skill)
 
-Before delivering, run the lead skill's checklist, then Section 6. Then tell the user in two to four lines: what was designed, which lead skill and design spec were used, and what is still needed from them (real photos, logo files, copy approval, platform access).
+This is design- and front-end-level protection, not a substitute for a professional security review or legal advice.
+
+### Rights and licensing
+- **Fonts:** confirm the license covers commercial web or app use before shipping. Google Fonts and Fontshare fonts (for example Satoshi, Cabinet Grotesk) are free; foundry fonts such as GT America, Söhne or PP Neue Montreal need a paid license, and some foundries license apps separately from websites. Record the font source and license in DESIGN.md.
+- **Images and video:** only the brand's own, properly licensed stock, or generated images the user has the right to use. Placeholder images (picsum and similar) never ship.
+- **Logos and trademarks:** other companies' logos only for real, permitted relationships. No "as seen in" or "trusted by" without the real coverage or customer behind it.
+- **Icons, UI kits, code:** open licenses (MIT, ISC, Apache-2.0, SIL OFL) or paid licenses the user holds; keep required license notices.
+- **No copying:** use references for inspiration only. Never reproduce another site's layout, copy, photography or illustration one-to-one.
+
+### Privacy
+- Collect only the data a feature needs, say why next to the field, and link the privacy policy.
+- Analytics, pixels and marketing tags load only after consent where the law requires it (EU and UK GDPR; check local rules such as the UAE PDPL for each market served).
+
+### Security
+- **No secrets in front-end or app code.** Private API keys, admin tokens and passwords stay server-side or in environment variables; never commit `.env` files or keys to a repository.
+- **HTTPS everywhere.** Validate forms on the server, not only in the browser. Validate uploads (type and size) on the server.
+- **Payments:** never collect card numbers in custom forms; use the platform checkout or a PCI-compliant payment provider.
+- **Third-party code:** scripts, embeds, plugins, apps and packages only from official sources, only the ones actually needed, kept updated; remove unused ones.
+- **Headers:** add a Content Security Policy and standard security headers where the platform allows it (custom code, Vercel, Netlify and similar).
+- **Sign-in screens:** passkeys or strong-password support, neutral error messages that do not reveal whether an account exists, rate-limited attempts, two-factor option for admin areas.
+- **Accounts that run the product:** individual staff accounts with least privilege and two-factor authentication on the platform, hosting, domain registrar and GitHub.
+
+## 8. Finish
+
+Before delivering, run the lead skill's checklist, then Sections 6 and 7. Then tell the user in two to four lines: what was designed, which lead skill and design spec were used, and what is still needed from them (real photos, logo files, copy approval, platform access).
+
+---
+
+Copyright (c) 2026 Mohammad Habibur Rahaman. Released under the MIT License. Part of the mrahamangm-droid/taste-skill fork of taste-skill by Leonxlnx (MIT License).
