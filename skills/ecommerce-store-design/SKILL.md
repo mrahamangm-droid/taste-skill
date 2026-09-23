@@ -94,7 +94,18 @@ Legal context (general information, not legal advice; confirm for each market):
 - Specs, size guides and care instructions live in metafields and render consistently, not as pasted HTML in descriptions.
 - Test with long product titles, many variants, sold-out variants, products without images, sale and non-sale prices, and Arabic or other long translations.
 
-## 9. Pre-flight check
+## 9. Store security, privacy and rights
+
+- **Payments:** never collect card numbers in custom forms or scripts. Use Shopify Checkout / Shopify Payments or another PCI-compliant provider.
+- **Accounts:** one account per staff member, least privilege, two-factor authentication required; remove former staff promptly. Protect the domain registrar, email and GitHub accounts with two-factor authentication too.
+- **Apps and code:** install apps only from the official app store or developers you trust, read the permissions (scopes) an app requests before approving, uninstall unused apps and remove the code they leave behind. Duplicate the live theme as a backup before any edit.
+- **Email:** set SPF, DKIM and DMARC on the store's sending domain so criminals cannot easily send fake order or payment emails in the store's name.
+- **Consent:** cookie and tracking consent banner (for Shopify, one built on the Customer Privacy API) wherever the markets served require it; pixels fire only after consent there.
+- **Fraud:** keep the platform's fraud analysis on and review high-risk orders before fulfilment.
+- **Content rights:** supplier or manufacturer photos only with permission; no brand names or logos the store has no right to use (trademark and counterfeit risk); write original product descriptions rather than copying competitors or manufacturers word for word.
+- **Fonts and images:** licensed for commercial use (see design-director Section 7).
+
+## 10. Pre-flight check
 
 - [ ] Store read stated; the page the traffic lands on got the most attention?
 - [ ] Real products, prices and images used; every placeholder marked and listed?
@@ -109,3 +120,11 @@ Legal context (general information, not legal advice; confirm for each market):
 - [ ] Titles, meta, structured data and alt text in place?
 - [ ] RTL and local currency correct for each market served?
 - [ ] Tokens match the store's DESIGN.md, and the store is visibly distinct from its sister stores?
+- [ ] No card data handled outside the platform checkout; staff accounts on two-factor with least privilege?
+- [ ] Only needed, trusted apps installed; theme backed up before edits?
+- [ ] Consent banner where required; SPF, DKIM and DMARC set on the sending domain?
+- [ ] Every photo, description, logo and font used with the right to use it?
+
+---
+
+Copyright (c) 2026 Mohammad Habibur Rahaman. Released under the MIT License. Part of the mrahamangm-droid/taste-skill fork of taste-skill by Leonxlnx (MIT License).
