@@ -93,7 +93,18 @@ Loading (skeleton matching the layout; show cached content first), empty (what g
 
 Screenshots show real screens of the core loop, one benefit per screenshot with a caption of six words or fewer, in one consistent style; the first two or three carry the pitch. Icon and screenshots follow the design spec. No claims the app cannot back up.
 
-## 11. Pre-flight check
+## 11. Security, privacy and rights
+
+- **No private keys in the app.** App bundles can be decompiled, so anything shipped inside is public. Keys with write, admin or billing power stay on your backend; the app calls the backend.
+- **Secure storage:** tokens and credentials in the Keychain (iOS) or Keystore-backed storage (Android); `expo-secure-store` or `flutter_secure_storage` on cross-platform stacks. Never AsyncStorage, SharedPreferences or plain files for secrets.
+- **Network:** HTTPS only (keep App Transport Security on for iOS; cleartext traffic off for Android).
+- **Disclosures match reality:** the iOS privacy details (and the privacy manifest for the app and its SDKs) and the Google Play Data safety form must describe what the app and every third-party SDK actually collect. Ask the App Tracking Transparency prompt before any cross-app tracking on iOS.
+- **Minimum permissions**, each explained at the moment of need.
+- **Sensitive screens** (finance, health, private messages): hide content in the app-switcher snapshot and offer a biometric lock where it makes sense.
+- **Third-party SDKs:** only from official sources, only what is needed, kept updated.
+- **Rights:** fonts licensed for app embedding (some foundries license apps separately from web), icons and images licensed for commercial use, no other brands' logos without permission.
+
+## 12. Pre-flight check
 
 - [ ] App read stated; core loop screens designed first?
 - [ ] Navigation, back behaviour, sheets and controls follow each platform?
@@ -107,3 +118,10 @@ Screenshots show real screens of the core loop, one benefit per screenshot with 
 - [ ] Permissions asked in context; sign-up deferred; account deletion available?
 - [ ] Correct keyboards and autofill hints on every input?
 - [ ] Tokens match DESIGN.md; one icon family; no lorem ipsum or invented data?
+- [ ] No private keys in the app; tokens in secure storage; HTTPS only?
+- [ ] Store privacy disclosures match what the app and its SDKs collect; tracking prompt shown before tracking on iOS?
+- [ ] Fonts, icons and images licensed for commercial app use?
+
+---
+
+Copyright (c) 2026 Mohammad Habibur Rahaman. Released under the MIT License. Part of the mrahamangm-droid/taste-skill fork of taste-skill by Leonxlnx (MIT License).
