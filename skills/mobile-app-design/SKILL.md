@@ -1,6 +1,6 @@
 ---
 name: mobile-app-design
-description: Use when designing or building mobile app screens, flows or components for iOS, Android, React Native/Expo or Flutter: native navigation, states, accessibility, onboarding and store assets.
+description: "Use when designing or building mobile app screens, flows or components for iOS, Android, React Native/Expo or Flutter: native navigation, states, accessibility, onboarding and store assets."
 ---
 
 # Mobile App Design
