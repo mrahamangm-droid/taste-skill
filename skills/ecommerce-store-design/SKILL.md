@@ -1,6 +1,6 @@
 ---
 name: ecommerce-store-design
-description: Use when designing or improving online store pages (home, collection, product, cart, search) or Shopify/WooCommerce themes: real product data, honest conversion design, RTL and GCC markets, speed.
+description: "Use when designing or improving online store pages (home, collection, product, cart, search) or Shopify/WooCommerce themes: real product data, honest conversion design, RTL and GCC markets, speed."
 ---
 
 # E-commerce Store Design
