@@ -1,0 +1,8 @@
+version: 2
+updates:
+  # No package.json in this repo, so there is no npm entry (Dependabot errors
+  # on an npm ecosystem with no manifest). Add one if a package.json is introduced.
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
